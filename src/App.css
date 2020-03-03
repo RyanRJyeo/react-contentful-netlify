@@ -311,6 +311,7 @@ h6 {
 }
 .img-container img {
   width: 100%;
+  /*height: 300px;*/
   display: block;
   transition: var(--mainTransition);
 }
@@ -517,7 +518,7 @@ h6 {
 .inquiry-form{
 	margin: 5% auto 0;
 	text-align: center;
-	transition: ease-in-out 0.3s;
+	transition: var(--mainTransition);
 	width: 50%;
 }
 
@@ -526,7 +527,7 @@ h6 {
 	border-bottom: 1px solid #d3d1d1;
 	margin-bottom: 3%;
 	padding: 10px 0;
-	transition: ease-in-out 0.3s;
+	transition: var(--mainTransition);
 	width: 90%;
 }
 
@@ -546,7 +547,7 @@ h6 {
 	color: white;
 	margin-top: 5%;
 	padding: 10px 40px;
-	transition: ease-in-out 0.2s;
+	transition: var(--mainTransition);
 }
 
 .inquiry-form button:hover{

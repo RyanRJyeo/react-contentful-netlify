@@ -43,22 +43,25 @@ class Inquiry extends React.Component {
   render() {
     const { name, email, message } = this.state;
     return (
-      <form className="inquiry-form" onSubmit={this.handleSubmit} action="/thank-you/">
+      <div>
         {this.renderRedirect()}
+        <br/>
         <Title title="contact us" />
-        <p>
-          <input className="inquiry-input" type="text" name="name" placeholder="Name" value={name} onChange={this.handleChange} required/>
-        </p>
-        <p>
-          <input className="inquiry-input" type="email" name="email" placeholder="Email" value={email} onChange={this.handleChange} required/>
-        </p>
-        <p>
-          <textarea className="inquiry-input" name="message" placeholder="Talk to us!" value={message} onChange={this.handleChange} rows="5" cols="50" required/>
-        </p>
-        <p>
-          <button type="submit">Send</button>
-        </p>
-      </form>
+        <form className="inquiry-form" onSubmit={this.handleSubmit} action="/thank-you/">
+          <p>
+            <input className="inquiry-input" type="text" name="name" placeholder="Name" value={name} onChange={this.handleChange} required/>
+          </p>
+          <p>
+            <input className="inquiry-input" type="email" name="email" placeholder="Email" value={email} onChange={this.handleChange} required/>
+          </p>
+          <p>
+            <textarea className="inquiry-input" name="message" placeholder="Talk to us!" value={message} onChange={this.handleChange} rows="5" cols="50" required/>
+          </p>
+          <p>
+            <button type="submit">Send</button>
+          </p>
+        </form>
+      </div>
     );
   }
 }
