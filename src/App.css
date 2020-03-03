@@ -515,8 +515,10 @@ h6 {
 
 /*Inquiry*/
 .inquiry-form{
-	margin-top: 10%;
+	margin: 5% auto 0;
 	text-align: center;
+	transition: ease-in-out 0.3s;
+	width: 50%;
 }
 
 .inquiry-input{
@@ -525,7 +527,7 @@ h6 {
 	margin-bottom: 3%;
 	padding: 10px 0;
 	transition: ease-in-out 0.3s;
-	width: 50%;
+	width: 90%;
 }
 
 .inquiry-input:hover{
@@ -535,7 +537,7 @@ h6 {
 .inquiry-input:focus{
 	border-bottom: 3px solid #B5A790;
 	outline: none;
-	width: 52%;
+	width: 92%;
 }
 
 .inquiry-form button{
@@ -559,12 +561,8 @@ h6 {
 }
 
 @media screen and (max-width: 768px) {
-	.inquiry-input{
-		width: 80%;
-	}
-
-	.inquiry-input:focus{
-		width: 82%;
+	.inquiry-form{
+		width: 90%;
 	}
 }
 /*end of inquiry*/

@@ -1,5 +1,6 @@
 import React from 'react';
-import { Redirect } from 'react-router-dom'
+import { Redirect } from 'react-router-dom';
+import Title from '../components/Title';
 
 
 const encode = (data) => {
@@ -44,6 +45,7 @@ class Inquiry extends React.Component {
     return (
       <form className="inquiry-form" onSubmit={this.handleSubmit} action="/thank-you/">
         {this.renderRedirect()}
+        <Title title="contact us" />
         <p>
           <input className="inquiry-input" type="text" name="name" placeholder="Name" value={name} onChange={this.handleChange} required/>
         </p>
