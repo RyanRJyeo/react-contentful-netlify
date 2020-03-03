@@ -555,4 +555,8 @@ h6 {
 	padding: 10px 40px;
 }
 
+.inquiry-form button:focus{
+	outline: none;
+}
+
 /*end of inquiry*/
