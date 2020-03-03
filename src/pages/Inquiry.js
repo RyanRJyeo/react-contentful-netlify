@@ -1,4 +1,5 @@
 import React from 'react';
+import { Redirect } from 'react-router-dom'
 
 
 const encode = (data) => {
@@ -23,13 +24,18 @@ class Inquiry extends React.Component {
       // headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...this.state })
     })
-      .then(() => alert("Success!"))
+      .then(this.setState({ redirect: true }))
       .catch(error => alert(error));
 
     e.preventDefault();
 
-    this.setState({ name: "", email: "", message: "" });
   };
+
+  renderRedirect = () => {
+    if (this.state.redirect) {
+      return <Redirect to='/thankyou' />
+    }
+  }
 
   handleChange = e => this.setState({ [e.target.name]: e.target.value });
 
@@ -37,6 +43,7 @@ class Inquiry extends React.Component {
     const { name, email, message } = this.state;
     return (
       <form className="inquiry-form" onSubmit={this.handleSubmit} action="/thank-you/">
+        {this.renderRedirect()}
         <p>
           <input className="inquiry-input" type="text" name="name" placeholder="Name" value={name} onChange={this.handleChange} required/>
         </p>

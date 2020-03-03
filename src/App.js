@@ -9,6 +9,7 @@ import Rooms from './pages/Rooms';
 import SingleRoom from './pages/SingleRoom';
 import Error from './pages/Error';
 import Inquiry from './pages/Inquiry';
+import ThankYou from './pages/ThankYou';
 
 // Components
 import Navbar from './components/Navbar';
@@ -24,6 +25,7 @@ function App() {
         <Route exact path="/rooms/" component={Rooms} />
         <Route exact path="/rooms/:slug" component={SingleRoom} />
         <Route exact path="/inquiry" component={Inquiry} />
+        <Route exact path="/thankyou" component={ThankYou} />
         <Route component={Error} />
       </Switch>
     </Router>
