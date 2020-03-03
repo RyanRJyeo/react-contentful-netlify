@@ -47,7 +47,14 @@ class Inquiry extends React.Component {
         {this.renderRedirect()}
         <br/>
         <Title title="contact us" />
-        <form className="inquiry-form" onSubmit={this.handleSubmit} action="/thank-you/">
+        {/* A little help for the Netlify bots if you're not using a SSG */}
+        <form name="contact" netlify="true" netlify-honeypot="bot-field" method='post' encType='multipart/form-data' hidden>
+            <input type="text" name="name" />
+            <input type="email" name="email" />
+            <textarea name="message"></textarea>
+        </form>
+        {/* end of Netlify bot helper */}
+        <form className="inquiry-form" onSubmit={this.handleSubmit}>
           <p>
             <input className="inquiry-input" type="text" name="name" placeholder="Name" value={name} onChange={this.handleChange} required/>
           </p>
