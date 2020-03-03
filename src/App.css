@@ -90,7 +90,6 @@ h6 {
 /* Navbar */
 .navbar {
   position: fixed;
-  opacity: 0.8;
   top: 0;
   left: 0;
   width: 100%;
@@ -512,4 +511,48 @@ h6 {
     max-width: 1170px;
   }
 }
-/* end of rooms fitler*/
+/* end of rooms filter*/
+
+/*Inquiry*/
+.inquiry-form{
+	margin-top: 10%;
+	text-align: center;
+}
+
+.inquiry-input{
+	border: none;
+	border-bottom: 1px solid #d3d1d1;
+	margin-bottom: 3%;
+	padding: 10px 0;
+	transition: ease-in-out 0.3s;
+	width: 50%;
+}
+
+.inquiry-input:hover{
+	border-bottom: 1px solid #B5A790;
+}
+
+.inquiry-input:focus{
+	border-bottom: 3px solid #B5A790;
+	outline: none;
+	width: 52%;
+}
+
+
+.inquiry-form button{
+	border-radius: 5px;
+	background-color: #B5A790;
+	color: white;
+	margin-top: 5%;
+	padding: 10px 40px;
+	transition: ease-in-out 0.2s;
+}
+
+.inquiry-form button:hover{
+	border: 1px solid #B5A790;
+	background-color: white;
+	color: #B5A790;
+	padding: 10px 40px;
+}
+
+/*end of inquiry*/
