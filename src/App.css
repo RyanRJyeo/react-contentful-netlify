@@ -538,7 +538,6 @@ h6 {
 	width: 52%;
 }
 
-
 .inquiry-form button{
 	border-radius: 5px;
 	background-color: #B5A790;
@@ -559,4 +558,13 @@ h6 {
 	outline: none;
 }
 
+@media screen and (max-width: 768px) {
+	.inquiry-input{
+		width: 80%;
+	}
+
+	.inquiry-input:focus{
+		width: 82%;
+	}
+}
 /*end of inquiry*/

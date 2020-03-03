@@ -2,9 +2,11 @@ import React from 'react';
 
 
 const encode = (data) => {
-  return Object.keys(data)
-      .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-      .join("&");
+    const formData = new FormData();
+    Object.keys(data).forEach((k)=>{
+      formData.append(k,data[k])
+    });
+    return formData
 }
 
 class Inquiry extends React.Component {
@@ -18,7 +20,7 @@ class Inquiry extends React.Component {
   handleSubmit = e => {
     fetch("/", {
       method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      // headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...this.state })
     })
       .then(() => alert("Success!"))
@@ -34,7 +36,7 @@ class Inquiry extends React.Component {
   render() {
     const { name, email, message } = this.state;
     return (
-      <form className="inquiry-form" onSubmit={this.handleSubmit}>
+      <form className="inquiry-form" onSubmit={this.handleSubmit} action="/thank-you/">
         <p>
           <input className="inquiry-input" type="text" name="name" placeholder="Name" value={name} onChange={this.handleChange} required/>
         </p>
